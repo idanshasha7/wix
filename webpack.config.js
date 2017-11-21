@@ -1,32 +1,23 @@
-const webpack = require('webpack');
-
 module.exports = {
-  context: __dirname,
-  entry: './index.js',
+  entry:  __dirname + '/index.js',
   output: {
     path: __dirname + '/__build__',
-    filename: 'bundle.js',
+    filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
         loader: 'babel',
+        exclude: /node_modules/,
         query: {
-          presets: ['es2015', 'react']
+          cacheDirectory: true,
+          presets: ['react', 'es2015']
         }
       }
     ]
-  },
-  resolve: {
-    extensions: ['', '.js', '.jsx']
-  },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    })
-  ]
-};
+  }
+}
