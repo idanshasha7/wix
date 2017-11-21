@@ -12,7 +12,7 @@
       "build": "react-scripts build",
       "test": "react-scripts test --env=jsdom",
       "eject": "react-scripts eject"
-    }
+    },
     "devDependencies": {
         "html-webpack-plugin": "^2.26.0",
         "path": "^0.12.7",
