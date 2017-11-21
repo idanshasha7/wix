@@ -3,16 +3,13 @@
     "version": "1.0.0",
     "homepage": "https://idanshasha7.github.io/wix/src/index.html",
     "scripts": {
-        "start": "webpack-dev-server"
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
     },
-    "scripts": {
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build",
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject"
-    }
     "devDependencies": {
         "html-webpack-plugin": "^2.26.0",
         "path": "^0.12.7",
