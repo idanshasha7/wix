@@ -3,10 +3,8 @@
     "version": "1.0.0",
     "homepage": "https://idanshasha7.github.io/wix/src/index.html",
     "scripts": {
-        "start": "webpack-dev-server"
-    },
-    "scripts": {
       "predeploy": "npm run build",
+      "setup": "npm install && npm run validate",
       "deploy": "gh-pages -d build",
       "start": "react-scripts start",
       "build": "react-scripts build",
