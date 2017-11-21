@@ -1,0 +1,37 @@
+.gallery_box{
+
+}
+.gallery_box img {
+  width:150px;
+  height: 150px;
+  border: 3px solid;
+}
+.gallery_box li {
+    display: inline-block;
+    /*width: 200px;*/
+    height: 200px;
+
+}
+.gallery_box a {
+    color: #000;
+    text-decoration: none;
+}
+
+.gallery_box  a:hover
+{
+     color:#000;
+     text-decoration:none;
+     cursor:pointer;
+}
+.gallery_box .searchField{
+  left: 0;
+  right:0 ;
+  margin:0 auto;
+  width: 250px;
+}
+
+.gallery_box .searchField input{
+  height: 40px;
+  padding: 5px;
+  width: 250px;
+}
