@@ -1,31 +1,32 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve('dist'),
-        filename: 'bundle.js'
-    },
-    resolve: {
-        extensions: ['.js', '.jsx']
-    },
-    externals: ['axios'],
-    module: {
-        loaders: [
-            {
-                test: [/\.js$/, /\.es6$/],
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            }
-        ]
-    },
-    plugins: [new HtmlWebpackPlugin({
-        template: './src/index.html',
-        filename: 'index.html',
-        inject: 'body'
-    })]
-}
+  context: __dirname,
+  entry: './index.js',
+  output: {
+    path: __dirname + '/__build__',
+    filename: 'bundle.js',
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'react']
+        }
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ]
+};
