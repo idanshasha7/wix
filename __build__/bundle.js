@@ -9657,7 +9657,7 @@ var App = function (_React$Component) {
         value: function componentDidMount() {
             var _this2 = this;
 
-            axios.get('http://www.reddit.com/r/' + this.state.search + '.json').then(function (res) {
+            axios.get('https://www.reddit.com/r/' + this.state.search + '.json').then(function (res) {
                 var posts = res.data.data.children.map(function (obj) {
                     return obj.data;
                 });
