@@ -25,7 +25,7 @@ class App extends React.Component {
 
     // Http call by axios
     componentDidMount() {
-        axios.get(`http://www.reddit.com/r/${this.state.search}.json`)
+        axios.get(`https://www.reddit.com/r/${this.state.search}.json`)
           .then(res => {
             const posts = res.data.data.children.map(obj => obj.data);
             console.log(posts);
