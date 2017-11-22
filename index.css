@@ -4,11 +4,17 @@
 .gallery_box img {
   width:150px;
   height: 150px;
-  border: 3px solid;
+  border: 5px solid;
+  position: absolute;
 }
-.gallery_box li {
+.gallery_box ul {
+  margin-top: 50px;
+  padding: 0;
+
+}
+.gallery_box li.items{
     display: inline-block;
-    /*width: 200px;*/
+    width: 200px;
     height: 200px;
 
 }

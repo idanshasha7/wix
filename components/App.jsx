@@ -8,18 +8,15 @@ class App extends React.Component {
     constructor(props) {
         super(props);
 
-        // an example array of items to be paged
-
-        var exampleItems = _.range(1, 151).map(i => { return { id: i, name: 'Item ' + i }; });
-
+        //initial state on constructor
         this.state = {
-            exampleItems: exampleItems,
+
             pageOfItems: [],
             posts: [],
             search: 'cats'
         };
 
-        // bind function in constructor instead of render (https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
+
         this.onChangePage = this.onChangePage.bind(this);
     }
 
@@ -46,6 +43,10 @@ class App extends React.Component {
         this.setState({ pageOfItems: pageOfItems });
     }
 
+    checkURL(url) {
+      return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
+    }
+
     render() {
         return (
             <div className='gallery_box'>
@@ -61,11 +62,13 @@ class App extends React.Component {
 
                         <ul>
                           {this.state.pageOfItems.map(post =>
-                              <li key={post.id}>
-                                  <a href={'http://www.reddit.com/' + post.permalink}>
-                                  <img src={post.url} alt=''  title={post.title}/>
-                                  </a>
-                              </li>
+
+                                  <li key={post.id} className='items'>
+                                      <a href={'http://www.reddit.com/' + post.permalink}>
+                                        <img src={post.url} alt=''  title={post.title}/>
+                                      </a>
+                                  </li>
+
                           )}
                         </ul>
                         <Pagination items={this.state.posts}

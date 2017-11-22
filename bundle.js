@@ -394,7 +394,7 @@ module.exports = warning;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 'use strict';
 
@@ -771,7 +771,7 @@ module.exports = ExecutionEnvironment;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -1154,7 +1154,7 @@ module.exports = ReactComponentTreeHook;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -1184,7 +1184,7 @@ module.exports = { debugTool: debugTool };
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 function makeEmptyFunction(arg) {
@@ -1479,7 +1479,7 @@ module.exports = ReactUpdates;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -1999,7 +1999,7 @@ module.exports = DOMProperty;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -2887,7 +2887,7 @@ module.exports = React;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 'use strict';
 
@@ -3480,7 +3480,7 @@ module.exports = emptyObject;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -4139,7 +4139,7 @@ module.exports = SyntheticMouseEvent;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -4597,7 +4597,7 @@ module.exports = setInnerHTML;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -4638,7 +4638,7 @@ module.exports = __webpack_require__(18);
  * LICENSE file in the root directory of this source tree.
  *
  * @typechecks
- *
+ * 
  */
 
 /*eslint-disable no-self-compare */
@@ -5191,7 +5191,7 @@ module.exports = EventPluginUtils;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -5395,7 +5395,7 @@ module.exports = LinkedValueUtils;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -5443,7 +5443,7 @@ module.exports = ReactComponentEnvironment;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -6843,7 +6843,7 @@ module.exports = CSSProperty;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -7463,7 +7463,7 @@ module.exports = ReactEmptyComponent;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -8228,7 +8228,7 @@ module.exports = ReactMount;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -8272,7 +8272,7 @@ module.exports = ReactNodeTypes;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -8320,7 +8320,7 @@ module.exports = ViewportMetrics;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -8382,7 +8382,7 @@ module.exports = accumulateInto;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -8744,7 +8744,7 @@ module.exports = instantiateReactComponent;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -9180,7 +9180,7 @@ module.exports = {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -9561,7 +9561,7 @@ module.exports = ReactNoopUpdateQueue;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -9629,22 +9629,16 @@ var App = function (_React$Component) {
     function App(props) {
         _classCallCheck(this, App);
 
-        // an example array of items to be paged
-
+        //initial state on constructor
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-        var exampleItems = _.range(1, 151).map(function (i) {
-            return { id: i, name: 'Item ' + i };
-        });
-
         _this.state = {
-            exampleItems: exampleItems,
+
             pageOfItems: [],
             posts: [],
             search: 'cats'
         };
 
-        // bind function in constructor instead of render (https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
         _this.onChangePage = _this.onChangePage.bind(_this);
         return _this;
     }
@@ -9683,6 +9677,11 @@ var App = function (_React$Component) {
             this.setState({ pageOfItems: pageOfItems });
         }
     }, {
+        key: 'checkURL',
+        value: function checkURL(url) {
+            return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -9712,7 +9711,7 @@ var App = function (_React$Component) {
                             this.state.pageOfItems.map(function (post) {
                                 return _react2.default.createElement(
                                     'li',
-                                    { key: post.id },
+                                    { key: post.id, className: 'items' },
                                     _react2.default.createElement(
                                         'a',
                                         { href: 'http://www.reddit.com/' + post.permalink },
@@ -10934,7 +10933,7 @@ module.exports = camelizeStyleName;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 var isTextNode = __webpack_require__(96);
@@ -11469,7 +11468,7 @@ module.exports = isTextNode;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  * @typechecks static-only
  */
 
@@ -17470,7 +17469,7 @@ module.exports = ReactDOMUnknownPropertyHook;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -17995,7 +17994,7 @@ module.exports = {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -18211,7 +18210,7 @@ module.exports = ReactEventListener;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -18285,7 +18284,7 @@ module.exports = ReactInjection;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -18829,7 +18828,7 @@ module.exports = ReactMultiChild;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -18926,7 +18925,7 @@ module.exports = ReactOwner;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -19137,7 +19136,7 @@ module.exports = ReactReconcileTransaction;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -19323,7 +19322,7 @@ module.exports = ReactServerRenderingTransaction;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -19979,7 +19978,7 @@ module.exports = SelectEventPlugin;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -20680,7 +20679,7 @@ module.exports = SyntheticWheelEvent;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -20965,7 +20964,7 @@ module.exports = findDOMNode;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -21160,7 +21159,7 @@ module.exports = getEventKey;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -21433,7 +21432,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -21495,7 +21494,7 @@ module.exports = KeyEscapeUtils;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -21978,7 +21977,7 @@ module.exports = ReactDOMFactories;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -22029,7 +22028,7 @@ module.exports = factory(isValidElement);
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
@@ -22183,7 +22182,7 @@ module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- *
+ * 
  */
 
 'use strict';
