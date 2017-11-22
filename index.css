@@ -5,7 +5,7 @@
   width:150px;
   height: 150px;
   border: 5px solid;
-  position: absolute;
+  position: absolute; 
 }
 .gallery_box ul {
   margin-top: 50px;
